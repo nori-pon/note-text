@@ -39,7 +39,7 @@ graph LR
     %% 全体の初期化設定
     %%{init: {"theme": "base", "themeCSS": ".nodeLabel { display: flex; justify-content: center; align-items: center; }"}}%%
 
-    %% 
+    %% 猫
     classDef catStyle fill:#FE7A47,stroke:#F5CA99,stroke-width:15px,font-size:150px,min-width:350px,min-height:350px;
     
     %% キラキラ

@@ -1,60 +1,77 @@
 ```mermaid
-graph TB
-%%{
-  init:{
-    'theme':'base',
-    'themeVariables': {
-      'primaryColor': '#0000ff',
-      'primaryTextColor': '#ffffff',
-      'primaryBorderColor': '#0000ff',
-      'lineColor': '#0000ff',
-      'secondaryColor': '#0000ff',
-      'tertiaryColor': '#ffffff'
-    },
-    'themeCSS':" .klass2 .nodeLabel,.klass3 .nodeLabel{ line-height: 1.6; font-weight: 900; display:flex; justify-content:center; align-items:center; text-align:center; overflow: visible;} .klass3 .nodeLabel{margin:0.4em}",
-    'flowchart':{
-     'rankSpacing' : 80,
-     'nodeSpacing' : 80,
-     'subGraphTitleMargin':{
-      'top': 40,
-      'bottom': 0
-      }
-   }
-   }
-}%%
+graph LR
+    %% 全体の色の設定
+    classDef catStyle fill:#C0C0C0,stroke:#808080,stroke-width:4px,color:#606060,font-size:40px;
 
-    subgraph katachi
-    direction TB
-        M["四角"]:::klass2
-        I[/"三角"\]:::klass2
-        U(("丸")):::klass3
-        F{"ひし形"}:::klass2
-    end
+    %% ノードの定義
+    node1{2}:::catStyle
+    node2[🐱]:::catStyle
+    node3[/🐈\]:::catStyle
+    node4((ねこ)):::catStyle
+    node5{nya}:::catStyle
 
-    style satori stroke-width:10px
-    classDef klass2,klass3 stroke-width:10px,font-size:96px
-    classDef subGraphTitle color:transparent
-    class satori,satorii subGraphTitle
+   %% 透明な線で横に並べる
+    node1 ~~~ node2 ~~~ node3 ~~~ node4 ~~~ node5
 
 ```
+```
+fill-------------内側の塗りつぶし 背景色
+stroke-----------枠線の色 図形を囲んでいる線   
+stroke-width-----枠線の太さ 線の厚み（pxで指定）
+color------------文字の色	
+```
+
 
 ---
 
+### 書き方メモ
 
-- TD	上 → 下
-- BT	下 → 上
-- LR	左 → 右
-- RL	右 → 左
+```
+TD	上 → 下
+BT	下 → 上
+LR	左 → 右
+RL	右 → 左
+```
 
-- A["text"] 四角
-- A[/""text\] 三角
-- A(("text")) 丸
-- A{"text"} ひし形
-- A[/"text"/] 平行四辺形
-- A["text"/] 逆向き平行四辺形（環境による）
+```
+A["text"] 四角
+A[/"text"\] 三角
+A(("text")) 丸
+A{"text"} ひし形
+A[/"text"/] 平行四辺形
+A["text"/] 逆向き平行四辺形（環境による）
+```
 
-- 'rankSpacing': 80 縦の間隔
-- 'nodeSpacing': 80 横の間隔
+` subgraph `：内部で使う名前（英数字推奨）
+- ` subgraph katachi ` ：katachiが表示名になる
+- ` end `：開いたら閉じる
+
+```
+rankSpacing　: 80 縦の間隔
+nodeSpacing　: 80 横の間隔
+```
+
+### color
+
+```
+#000000（黒）
+#ffffff（白）
+#ff0000（赤）
+#00ff00（緑）
+#0000ff（青）
+```
+rgb / rgba
+```
+rgb(255, 0, 0)        :R,G,B
+rgba(255, 0, 0, 0.5)  :R,G,B,A（透明度）
+
+A = Alpha 値は0～1
+0 → 完全透明
+1 → 完全不透明
+0.5 → 半透明
+
+```
+
 
 
 

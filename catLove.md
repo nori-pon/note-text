@@ -1,12 +1,12 @@
 ```mermaid
 graph LR
     %% 全体の色の設定
-    classDef catStyle fill:#C0C0C0,stroke:#808080,stroke-width:4px,color:#606060,font-size:40px;
+    classDef catStyle fill:#D9B44A,stroke:#75B1A9,stroke-width:7px,color:#ffffff,font-size:40px;
 
     %% ノードの定義
-    node1{2}:::catStyle
-    node2[🐱]:::catStyle
-    node3[/🐈\]:::catStyle
+    node1[/"🙀"/]:::catStyle
+    node2["♥"]:::catStyle
+    node3[/2.22\]:::catStyle
     node4((ねこ)):::catStyle
     node5{nya}:::catStyle
 
@@ -21,6 +21,44 @@ stroke-width-----枠線の太さ 線の厚み（pxで指定）
 color------------文字の色	
 ```
 
+```mermaid
+graph TD
+    %% 丸のパーツだけ大きくする設定
+    classDef largeCatCircle fill:#FE7A47,stroke:#F5CA99,stroke-width:12px,color:#D8412F,font-weight:bold,font-size:120px,min-width:800px,min-height:800px,padding:20px;
+    A(("🐈")):::largeCatCircle
+
+    classDef myStyle fill:#FE7A47,stroke:#F5CA99,stroke-width:8px,color:#D8412F,font-weight:bold,font-size:24px;
+    B[/"2026/02/22"/]:::myStyle
+
+    %% 透明な矢印でつなぐ
+    A ~~~ B
+```
+
+```mermaid
+graph LR
+    %% 全体の初期化設定
+    %%{init: {"theme": "base", "themeCSS": ".nodeLabel { display: flex; justify-content: center; align-items: center; }"}}%%
+
+    %% 
+    classDef catStyle fill:#FE7A47,stroke:#F5CA99,stroke-width:15px,font-size:150px,min-width:350px,min-height:350px;
+    
+    %% キラキラ
+    classDef sparkStyle fill:#FFB300,stroke:#F5CA99,stroke-width:5px,font-size:40px,min-width:80px,min-height:80px;
+
+    %% ノード定義
+    L{"✨"}:::sparkStyle
+    C(("🐈")):::catStyle
+    R{"✨"}:::sparkStyle
+
+    %% 横に並べる（透明な線でつなぐ）
+    L ~~~ C ~~~ R
+
+```
+
+```
+%% は通常、コメントアウト
+%%{init: ...}%% は特別な意味を持つ 「ディレクティブ（設定指示）
+```
 
 ---
 

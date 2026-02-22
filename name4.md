@@ -17,8 +17,8 @@ flowchart LR
     end
 
     %% スタイルの調整
-    classDef hugeText font-size:100px,stroke-width:10px;
+    classDef hugeText fill:#547792,stroke:#1A3263,font-size:100px,stroke-width:10px,color:#FAB95B;
     
     %% サブグラフ
-    style outer fill:#1d1d3d,stroke:#88ccff,stroke-width:4px
+    style outer fill:#1d1d3d,stroke:#F6CE71,stroke-width:4px
 ```

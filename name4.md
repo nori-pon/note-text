@@ -22,3 +22,14 @@ flowchart LR
     %% サブグラフ
     style outer fill:#1d1d3d,stroke:#F6CE71,stroke-width:4px
 ```
+
+---
+
+```mermaid
+graph LR
+    classDef aStyle fill:#547792,stroke:#1A3263,font-size:200px,stroke-width:20px,color:#FAB95B;
+
+    A(("pi")):::aStyle
+```
+
+---

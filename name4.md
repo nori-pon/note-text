@@ -152,3 +152,30 @@ flowchart LR
     %% サブグラフ
     style outer fill:#1d1d3d,stroke:#F6CE71,stroke-width:6px
 ```
+
+---
+
+```mermaid
+%%{
+  init:{
+    'theme':'base',
+    'themeVariables': {
+      'secondaryColor': '#000000',     %% 外側の四角の色
+      'primaryColor': '#EAE4D5',       %% 中の丸の色
+      'primaryBorderColor': '#B6B09F', %% 丸の枠線
+      'primaryTextColor': '#FAB95B'    %% 中の文字の色
+    }
+  }
+}%%
+flowchart LR
+    subgraph outer [" "]
+        direction LR
+        node_pi(("🐥")):::hugeText
+    end
+
+    %% スタイルの調整
+    classDef hugeText fill:#EAE4D5,stroke:#B6B09F,font-size:100px,stroke-width:10px,color:#FAB95B;
+    
+    %% サブグラフ
+    style outer fill:#000000,stroke:#000000,stroke-width:4px
+```
